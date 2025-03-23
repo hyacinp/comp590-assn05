@@ -1,3 +1,6 @@
+#Team: Kibby Hyacinth Pangilinan
+
+
 defmodule WaitingRoom do
   def start_link(barber_pid) do
     spawn_link(fn -> loop(barber_pid, []) end)

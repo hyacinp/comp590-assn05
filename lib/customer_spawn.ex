@@ -1,3 +1,5 @@
+#Team: Kibby Hyacinth Pangilinan
+
 defmodule CustomerSpawn do
   def start_link(receptionist_pid, waiting_room_pid) do
     spawn(__MODULE__, :loop, [receptionist_pid, waiting_room_pid])

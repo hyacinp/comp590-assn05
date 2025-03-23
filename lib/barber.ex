@@ -1,3 +1,5 @@
+#Team: Kibby Hyacinth Pangilinan
+
 defmodule Barber do
   def start_link(waiting_room) do
     spawn_link(__MODULE__, :loop, [waiting_room])

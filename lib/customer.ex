@@ -1,3 +1,5 @@
+#Team: Kibby Hyacinth Pangilinan
+
 defmodule Customer do
   def start_link(receptionist_pid, waiting_room_pid) do
     spawn_link(fn -> loop(receptionist_pid, waiting_room_pid)

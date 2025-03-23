@@ -1,3 +1,5 @@
+#Team: Kibby Hyacinth Pangilinan
+
 defmodule Receptionist do
   def start_link(waiting_room, max_chairs) do
     spawn_link(fn -> loop(waiting_room, max_chairs) end)
