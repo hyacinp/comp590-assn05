@@ -24,7 +24,7 @@ As per the instructions, the program needs a receptionist to monitor the waiting
 
 
 ### main.ex
-Lastly I created main.ex to have a module that is responsible for putting everything together and spawning the barber, receptionist, customer and waiting room.
+Lastly I created main.ex to have a module that is responsible for putting everything together and spawning the barber, receptionist, customers and waiting room.
 
 Additionally, I used `send/receive` to facilitate actions/behaviors between key actors of the program. I also ensured that I used tail recursion in my processes so that all processes could run indefinitely.
 
