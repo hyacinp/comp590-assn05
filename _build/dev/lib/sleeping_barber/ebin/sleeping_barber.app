@@ -1,0 +1,9 @@
+{application,sleeping_barber,
+             [{modules,['Elixir.Barber','Elixir.Customer',
+                        'Elixir.CustomerSpawn','Elixir.Main',
+                        'Elixir.Receptionist','Elixir.WaitingRoom']},
+              {optional_applications,[]},
+              {applications,[kernel,stdlib,elixir,logger]},
+              {description,"sleeping_barber"},
+              {registered,[]},
+              {vsn,"0.1.0"}]}.
