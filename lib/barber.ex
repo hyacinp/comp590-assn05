@@ -1,6 +1,6 @@
 defmodule Barber do
   def start_link(waiting_room) do
-    spawn_link(fn -> loop(waiting_room) end)
+    spawn_link(__MODULE__, :loop, [waiting_room])
   end
 
   def loop(waiting_room) do
@@ -10,7 +10,7 @@ defmodule Barber do
         :timer.sleep(:rand.uniform(2000))
         IO.puts("[Barber] Finished cutting customer #{inspect(customer_pid)}'s hair")
         send(customer_pid, :done)
-        loop(waiting_room)
+        __MODULE__.loop(waiting_room)
 
       :no_customers ->
           IO.puts("[Barber] No customers. Sleeping")
@@ -20,8 +20,8 @@ defmodule Barber do
               :timer.sleep(:rand.uniform(2000))
               IO.puts("[Barber] Finished cutting customer #{inspect(customer_pid)}'s hair")
               send(customer_pid, :done)
-              loop(waiting_room)
           end
+          __MODULE__.loop(waiting_room)
     end
   end
 end
